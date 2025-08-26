@@ -105,6 +105,12 @@ html {
   scroll-padding-top: 4rem; /* 64px to account for navbar height */
 }
 
+/* Blur effect for mobile menu */
+.main-blur {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
 /* Scroll fade animations */
 .fade-in-section {
   opacity: 0;
