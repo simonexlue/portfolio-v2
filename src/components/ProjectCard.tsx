@@ -12,7 +12,7 @@ export interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description, demoLink, repoLink, gradientClass }) => {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-[550px]">
+    <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-[550px] transition-transform duration-300 hover:scale-105">
       <img src={image} alt={title} className="h-80 w-full object-cover" />
       <div className="p-6 flex flex-col flex-grow">
         <h3 className={`text-xl font-semibold mb-2 ${gradientClass || ''}`}>{title}</h3>

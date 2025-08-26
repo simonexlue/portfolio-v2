@@ -9,14 +9,14 @@ const Contact: React.FC = () => {
         <p className="text-center text-gray-300 mb-8">
           I'm always open to new opportunities and collaborations. Feel free to reach out!
         </p>
-        <form className="space-y-4">
+        <form className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-white text-sm font-medium mb-2">Name</label>
             <input
               id="name"
               type="text"
               placeholder="Your Name"
-              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none"
+              className="w-full px-4 py-4 rounded-md bg-gray-700 text-white focus:outline-none"
             />
           </div>
           <div>
@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
               id="email"
               type="email"
               placeholder="your.email@example.com"
-              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none"
+              className="w-full px-4 py-4 rounded-md bg-gray-700 text-white focus:outline-none"
             />
           </div>
           <div>
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
             <textarea
               id="message"
               placeholder="Your message..."
-              className="w-full px-4 py-2 rounded-md bg-gray-700 text-white h-32 focus:outline-none"
+              className="w-full px-4 py-4 rounded-md bg-gray-700 text-white h-45 focus:outline-none"
             />
           </div>
           <div className="text-center pt-4">
