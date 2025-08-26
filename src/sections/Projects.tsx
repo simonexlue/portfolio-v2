@@ -27,7 +27,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
+    <section id="projects" className="py-20 fade-in-section" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
       <div className="px-15">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 gradient-text">My Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

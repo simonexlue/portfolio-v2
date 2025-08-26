@@ -3,7 +3,7 @@ import Button from '../components/Button';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="min-h-[calc(100vh-4rem)] flex items-center bg-gray-800">
+    <section id="contact" className="min-h-[calc(100vh-4rem)] flex items-center bg-gray-800 fade-in-section">
       <div className="w-full px-15 lg:px-20 xl:px-24 max-w-4xl mx-auto">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-8 gradient-text">Get in Touch</h2>
         <p className="text-center text-gray-300 mb-8">
