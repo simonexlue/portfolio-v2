@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="geometric" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- Subtle triangles -->
+      <polygon points="0,0 50,0 25,43" fill="none" stroke="#2a2a2a" stroke-width="0.8" opacity="0.6"/>
+      <polygon points="150,0 200,0 175,43" fill="none" stroke="#2a2a2a" stroke-width="0.8" opacity="0.6"/>
+      <polygon points="75,100 125,100 100,143" fill="none" stroke="#2a2a2a" stroke-width="0.8" opacity="0.6"/>
+      
+      <!-- Hexagon pattern -->
+      <polygon points="25,25 75,25 100,50 75,75 25,75 0,50" fill="none" stroke="#3a3a3a" stroke-width="0.5" opacity="0.4"/>
+      <polygon points="125,125 175,125 200,150 175,175 125,175 100,150" fill="none" stroke="#3a3a3a" stroke-width="0.5" opacity="0.4"/>
+      
+      <!-- Subtle dots -->
+      <circle cx="50" cy="50" r="1.5" fill="#4a4a4a" opacity="0.3"/>
+      <circle cx="150" cy="150" r="1.5" fill="#4a4a4a" opacity="0.3"/>
+      <circle cx="100" cy="100" r="1" fill="#4a4a4a" opacity="0.4"/>
+      
+      <!-- Diagonal lines -->
+      <line x1="0" y1="0" x2="200" y2="200" stroke="#2a2a2a" stroke-width="0.4" opacity="0.3"/>
+      <line x1="200" y1="0" x2="0" y2="200" stroke="#2a2a2a" stroke-width="0.4" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#geometric)" />
+</svg>

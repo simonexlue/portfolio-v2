@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-700 sticky top-0 z-50">
+    <nav className="navbar-bg sticky top-0 z-50">
       <div className="w-full px-12">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 navbar-bg">
             <a href="#home" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-200">Home</a>
             <a href="#about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-200">About</a>
             <a href="#skills" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition duration-200">Skills</a>
