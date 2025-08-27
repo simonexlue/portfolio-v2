@@ -17,6 +17,18 @@ export const initScrollAnimations = () => {
     });
   }, observerOptions);
 
+  // Check for sections that are already visible on page load
+  const checkInitialVisibility = () => {
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    fadeInSections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isVisible) {
+        section.classList.add('is-visible');
+      }
+    });
+  };
+
   // Fade out animation observer
   const fadeOutObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -39,6 +51,9 @@ export const initScrollAnimations = () => {
   fadeOutSections.forEach(section => {
     fadeOutObserver.observe(section);
   });
+
+  // Check initial visibility after a short delay to ensure DOM is ready
+  setTimeout(checkInitialVisibility, 100);
 
   // Cleanup function
   return () => {
