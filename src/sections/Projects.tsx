@@ -1,5 +1,6 @@
 import ProjectCard from '../components/ProjectCard';
-import placeholder from '../assets/my-photo.jpg';
+
+// Waypoint
 import waypoint from '../assets/waypoint/waypoint.png';
 import waypoint1 from '../assets/waypoint/1.png';
 import waypoint2 from '../assets/waypoint/2.png';
@@ -9,21 +10,40 @@ import waypoint5 from '../assets/waypoint/5.png';
 import waypoint6 from '../assets/waypoint/6.png';
 import waypoint7 from '../assets/waypoint/7.png';
 
+// The Body Shop Clone
+import thebodyshop from '../assets/thebodyshop/thebodyshop.png';
+import thebodyshop1 from '../assets/thebodyshop/1.png';
+import thebodyshop2 from '../assets/thebodyshop/2.png';
+import thebodyshop3 from '../assets/thebodyshop/3.png';
+import thebodyshop4 from '../assets/thebodyshop/4.png';
+import thebodyshop5 from '../assets/thebodyshop/5.png';
+import thebodyshop6 from '../assets/thebodyshop/6.png';
+
+// Red Ball Drills Report Portal
+import redballdrills from '../assets/rbd/rbd.png';
+import redballdrills1 from '../assets/rbd/1.png';
+import redballdrills2 from '../assets/rbd/2.png';
+import redballdrills3 from '../assets/rbd/3.png';
+import redballdrills4 from '../assets/rbd/4.png';
+import redballdrills5 from '../assets/rbd/5.png';
+
+
 // Export project details for use in ProjectDetails component
 export const projectDetails = [
   {
     id: 1,
     title: 'WayPoint',
     description: "A mobile application built with React Native, FastAPI, and PostgreSQL that delivers personalized travel recommendations, real-time collaborative itinerary planning, and API-driven map integrations.",
+    private: false,
     images: [
-      waypoint,        // Thumbnail for project card
-      waypoint1,       // Carousel image 1
-      waypoint2,       // Carousel image 2
-      waypoint3,       // Carousel image 3
-      waypoint4,       // Carousel image 4
-      waypoint5,       // Carousel image 5
-      waypoint6,       // Carousel image 6
-      waypoint7,       // Carousel image 7
+      waypoint,  //thumbnail for project card
+      waypoint1,    
+      waypoint2, 
+      waypoint3,       
+      waypoint4,   
+      waypoint5,    
+      waypoint6,       
+      waypoint7,       
     ],
     repoLink: 'https://github.com/latte-labs/waypoint',
     technologies: [
@@ -64,76 +84,82 @@ export const projectDetails = [
   },
   {
     id: 2,
-    title: 'Project Title Two',
-    description: 'Another project demonstrating ability to build features using various technologies.',
+    title: 'The Body Shop Clone',
+    description: 'Developed a The Body Shop clone on Shopify. Created a bundle-builder powered by metaobjects with product bundle discount calculations. Worked with products, collections, metaobjects, and metafields.',
+    private: true,
     images: [
-      placeholder,
-      placeholder,
-      placeholder,
+      thebodyshop,
+      thebodyshop1,
+      thebodyshop2,
+      thebodyshop3,
+      thebodyshop4,
+      thebodyshop5,
+      thebodyshop6,
     ],
     repoLink: '#',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+    technologies: ['Shopify', 'Liquid', 'Javascript', 'HTML', 'CSS'],
     features: [
-      'User authentication and authorization',
-      'Real-time data processing',
-      'Responsive web design',
-      'API integration',
-      'Database management'
+        'Custom bundle-builder powered by metaobjects',
+        'Integration of metaobjects and metafields for product data',
+        'Replication of The Body Shop storefront using the Dawn theme',
+        'Responsive theme design',
+        'Collection and product detail page customization'
     ],
     challenges: [
-      'Scalable architecture design',
-      'Performance optimization',
-      'Security implementation'
+        'Learning to extend Shopify Dawn theme',
+        'Implementing a bundle-builder within theme constraints',
+        'Managing product and collection data with metaobjects/metafields'
     ],
     solutions: [
-      'Implemented microservices architecture',
-      'Used Redis for caching and session management',
-      'Applied OAuth 2.0 and JWT for security'
+        'Extended Dawn theme using custom Liquid sections',
+        'Used metaobjects and metafields to handle bundle-builder configuration',
+        'Replicated layouts and storefront pages for a realistic clone'
     ],
     overview: [
-      'Full-stack web application with modern architecture',
-      'Real-time data processing and synchronization',
-      'Secure user authentication and authorization',
-      'Responsive design for all device types',
-      'RESTful API with comprehensive documentation',
-      'Database optimization and caching strategies'
+        "The Body Shop Clone is a Shopify storefront replica built with the Dawn theme to demonstrate theme development skills. The project focused on creating a bundle-builder feature powered by metaobjects and metafields, while replicating the core functionality of products, collections, and storefront layouts. Emphasis was placed on responsive design, Liquid customization, and accurately mirroring the real storefront experience."
     ]
   },
   {
     id: 3,
-    title: 'Project Title Three',
-    description: 'An exciting project that involved delivering a challenging and rewarding solution.',
+    title: 'Red Ball Drills Report Portal',
+    description: 'Freelance engagement delivering production-ready enhancements to a reporting system, including Node.js/Next.js upgrades, UI improvements, and PDF export functionality.',
+    private: true,
     images: [
-      placeholder,
-      placeholder,
-      placeholder,
+      redballdrills,
+      redballdrills1,
+      redballdrills2,
+      redballdrills3,
+      redballdrills4,
+      redballdrills5,
     ],
     repoLink: '#',
-    technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL'],
+    technologies: ['Next.js', 'Node.js', 'React', 'Tailwind CSS', 'Javascript'],
     features: [
-      'Advanced data visualization',
-      'Machine learning integration',
-      'Automated reporting system',
-      'Multi-user collaboration',
-      'Real-time analytics dashboard'
+        'Upgraded application from Node.js 18 → Node.js 22 and Next.js 13 → 15',
+        'Resolved dependency incompatibilities during framework upgrade',
+        'Improved moderator table responsiveness with horizontal scrolling on smaller screens',
+        'Implemented rich text editing with bold, underline, lists, and markdown storage',
+        'Ensured rich text renders correctly when viewing or printing reports',
+        'Disabled appropriate fields with contextual info tooltips',
+        'Refined section titles with hover tooltips for clarity',
+        'Added export-to-editable-PDF feature with Playwright + Chromium'
     ],
     challenges: [
-      'Complex data processing requirements',
-      'Integration with ML models',
-      'Real-time data synchronization'
+        'Framework upgrade required breaking changes (Next.js 13 → 15, React 18 → 19)',
+        'PrimeReact Editor styling conflicts with existing form fields',
+        'Maintaining consistent rich text formatting across editing, saving, and viewing',
+        'Designing professional PDFs with editable fields while preserving security'
     ],
     solutions: [
-      'Implemented efficient data processing pipelines',
-      'Used Celery for background task processing',
-      'Applied WebSocket for real-time updates'
+        'Upgraded dependencies with version alignment (Next.js 15, React 19, eslint-config-next)',
+        'Configured PrimeReact unstyled mode and applied custom CSS for consistent editor styling',
+        'Imported Quill CSS and customized toolbar/content borders for seamless UI',
+        'Used markdown to store rich text without changing database schema',
+        'Implemented Playwright-based PDF generation with sanitized input and print-optimized styling',
+        'Added secure API endpoint and template engine for professional PDF output'
     ],
     overview: [
-      'Advanced data visualization and analytics platform',
-      'Machine learning model integration and deployment',
-      'Automated reporting and dashboard generation',
-      'Multi-user collaboration and data sharing',
-      'Real-time analytics and monitoring system',
-      'Scalable backend with Django and PostgreSQL'
+      "Red Ball Drills Reporting Portal was a freelance engagement where I modernized and enhanced a client’s enterprise reporting system. The project involved a migration from Node.js 18 to Node.js 22, requiring careful dependency alignment and resolution of breaking changes. Beyond upgrading the stack, I delivered significant usability improvements, including responsive moderator tables, rich text editing with markdown persistence, and refined section labeling with contextual tooltips. A key highlight was designing and implementing a production-ready PDF export system using Playwright and Chromium, enabling editable, professional-grade reports directly from the platform. Throughout the project, I emphasized security, performance, and maintainability—ensuring the application not only met immediate client needs but was also positioned for long-term scalability."
     ]
   }
 ];

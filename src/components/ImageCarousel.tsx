@@ -4,9 +4,10 @@ interface ImageCarouselProps {
   images: string[];
   title?: string;
   className?: string;
+  imageSize?: 'mobile' | 'desktop';
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className = '' }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className = '', imageSize = 'mobile' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const scrollTo = useCallback((index: number) => {
@@ -40,6 +41,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
 
   // Skip the first image (thumbnail) for the wheel
   const wheelImages = images.slice(1);
+  
+  // Set image size based on imageSize prop
+  const imageWidth = imageSize === 'desktop' ? 'w-[1100px]' : 'w-72';
 
   return (
     <div className={`relative ${className}`}>
@@ -71,7 +75,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
               <img 
                 src={image} 
                 alt={`${title || 'Project'} image ${index + 2}`}
-                className="w-72 h-auto object-contain rounded-lg"
+                className={`${imageWidth} h-auto object-contain rounded-lg`}
                 style={{
                   imageRendering: 'crisp-edges',
                   backfaceVisibility: 'hidden',

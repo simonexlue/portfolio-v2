@@ -9,9 +9,10 @@ export interface ProjectCardProps {
   repoLink?: string;
   gradientClass?: string;
   projectId: number;
+  private?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ images, title, description, repoLink, gradientClass, projectId }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ images, title, description, repoLink, gradientClass, projectId, private: isPrivate }) => {
   return (
     <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-[550px] transition-transform duration-300 hover:scale-105">
       <img src={images[0]} alt={title} className="h-80 w-full object-cover" />
@@ -25,9 +26,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ images, title, description, r
               </Button>
             </Link>
             {repoLink && (
-              <Button href={repoLink} target="_blank" rel="noopener noreferrer" className="text-sm bg-gray-600 hover:bg-gray-700">
-                GitHub Repo
-              </Button>
+              isPrivate ? (
+                <Button className="text-sm !bg-gray-400 !text-gray-600 cursor-not-allowed hover:!bg-gray-400" disabled>
+                  It's private!
+                </Button>
+              ) : (
+                <Button href={repoLink} target="_blank" rel="noopener noreferrer" className="text-sm bg-gray-600 hover:bg-gray-700">
+                  GitHub Repo
+                </Button>
+              )
             )}
         </div>
       </div>
