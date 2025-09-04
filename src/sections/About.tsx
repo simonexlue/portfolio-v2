@@ -23,7 +23,7 @@ const About: React.FC = () => {
               craft.
             </p>
             <p className="text-gray-300 text-lg lg:text-xl xl:text-2xl">
-                When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or diving deep into the latest development tools.
+                When I'm not coding, you can find me trying to hit a golf ball at the range, eating new foods, or trying to learn something new.
             </p>
 
 
