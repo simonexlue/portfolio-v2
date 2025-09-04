@@ -54,11 +54,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
   return (
     <div className={`relative ${className}`}>
       {/* 3D Carousel Container */}
-      <div className="relative h-[600px] w-full flex items-center justify-center overflow-hidden bg-gray-900 rounded-lg shadow-2xl z-10">
+      <div className={`relative ${imageSize === 'desktop' ? 'h-[350px] md:h-[600px]' : 'h-[600px]'} w-full flex items-center justify-center overflow-hidden bg-gray-900 rounded-lg shadow-2xl z-10`}>
         {/* Background Images in Circle */}
         {wheelImages.map((image, index) => {
           const angle = ((index - currentIndex) * 360) / wheelImages.length;
-          const radius = 320;
+          const radius = imageSize === 'desktop' ? 200 : 320;
           const x = Math.sin((angle * Math.PI) / 180) * radius;
           const z = Math.cos((angle * Math.PI) / 180) * radius;
           const scale = z > 0 ? 0.5 + (z / radius) * 0.3 : 0.3;
