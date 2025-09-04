@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface NavbarProps {
   onMenuToggle: (isOpen: boolean) => void;
@@ -6,6 +6,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     const newMenuState = !isMenuOpen;
@@ -18,6 +19,31 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
       document.body.style.overflow = 'auto';
     }
   };
+
+  const closeMenu = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+      onMenuToggle(false);
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  // Handle click outside to close menu
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -58,7 +84,11 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
       {/* Mobile Navigation Overlay */}
       <>
         {/* Side menu */}
-        <div className={`md:hidden fixed -left-2/3 top-0 h-full w-2/3 z-50 overflow-hidden transform transition-transform duration-600 ease-out ${isMenuOpen ? 'translate-x-full' : 'translate-x-0'}`} style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
+        <div 
+          ref={menuRef}
+          className={`md:hidden fixed -left-2/3 top-0 h-full w-2/3 z-50 overflow-hidden transform transition-transform duration-600 ease-out ${isMenuOpen ? 'translate-x-full' : 'translate-x-0'}`} 
+          style={{ backgroundColor: 'rgb(14, 19, 30)' }}
+        >
           <div className="flex flex-col h-full">
             {/* Header with close button */}
             <div className="flex justify-between items-center p-8">
