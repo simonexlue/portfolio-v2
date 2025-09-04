@@ -10,10 +10,13 @@ const Skills: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4 gradient-frontend">Frontend</h3>
             <ul className="space-y-2 text-gray-300">
               <li>JavaScript (ES6+)</li>
-              <li>HTML & CSS</li>
+              <li>TypeScript</li>
               <li>React</li>
+              <li>Next.js</li>
+              <li>React Native</li>
+              <li>HTML & CSS</li>
               <li>Tailwind CSS</li>
-              <li>Responsive Design</li>
+              <li>Liquid</li>
             </ul>
           </div>
           <div className="p-6 rounded-lg transition-transform duration-300 hover:scale-105 gradient-border-red-yellow" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
@@ -21,15 +24,16 @@ const Skills: React.FC = () => {
             <ul className="space-y-2 text-gray-300">
               <li>Node.js</li>
               <li>Python</li>
+              <li>FastAPI</li>
               <li>RESTful APIs</li>
             </ul>
           </div>
           <div className="p-6 rounded-lg transition-transform duration-300 hover:scale-105 gradient-border-cyan-blue" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
             <h3 className="text-xl font-semibold mb-4 gradient-databases">Databases</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Firebase Firestore</li>
-              <li>MongoDB</li>
               <li>PostgreSQL</li>
+              <li>Firebase</li>
+              <li>MongoDB</li>
               <li>MySQL</li>
             </ul>
           </div>
@@ -37,6 +41,11 @@ const Skills: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4 gradient-tools">Tools & Others</h3>
             <ul className="space-y-2 text-gray-300">
               <li>Git & GitHub</li>
+              <li>Shopify</li>
+              <li>Responsive Design</li>
+              <li>API Integration</li>
+              <li>Mobile Development</li>
+              <li>E-commerce</li>
             </ul>
           </div>
         </div>
