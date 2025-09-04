@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
   return (
     <>
       <nav className={`navbar-bg sticky top-0 z-50 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
-        <div className="w-full px-12">
+        <div className="w-full px-6 md:px-12">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <a href="#home" className="text-2xl font-bold gradient-text">Simone Lue</a>
@@ -75,36 +75,21 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
             </div>
             
             {/* Navigation Links */}
-            <div className="flex-1 flex flex-col justify-start pt-8 px-12 space-y-12">
-              <a href="#home" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200 flex items-center justify-between">
+            <div className="flex-1 flex flex-col justify-start pt-8 px-6 md:px-12 space-y-12">
+              <a href="#home" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
                 Home
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </a>
-              <a href="#about" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200 flex items-center justify-between">
+              <a href="#about" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
                 About
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </a>
-              <a href="#skills" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200 flex items-center justify-between">
+              <a href="#skills" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
                 Skills
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </a>
-              <a href="#projects" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200 flex items-center justify-between">
+              <a href="#projects" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
                 Projects
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </a>
-              <a href="#contact" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200 flex items-center justify-between">
+              <a href="#contact" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
                 Contact
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
               </a>
             </div>
           </div>

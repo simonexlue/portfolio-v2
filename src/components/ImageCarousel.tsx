@@ -24,10 +24,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
 
   if (images.length === 0) return null;
   if (images.length === 1) {
+    const singleImageWidth = imageSize === 'desktop' 
+      ? 'w-full max-w-none' 
+      : 'w-full max-w-md';
+    
     return (
       <div className={`relative ${className}`}>
         <div className="bg-gray-900 rounded-lg shadow-2xl p-4 flex items-center justify-center">
-          <div className="max-w-md mx-auto">
+          <div className={`mx-auto ${singleImageWidth}`}>
             <img 
               src={images[0]} 
               alt={title || 'Project image'} 
@@ -43,7 +47,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
   const wheelImages = images.slice(1);
   
   // Set image size based on imageSize prop
-  const imageWidth = imageSize === 'desktop' ? 'w-[1100px]' : 'w-72';
+  const imageWidth = imageSize === 'desktop' 
+    ? 'w-full max-w-none' 
+    : 'w-72';
 
   return (
     <div className={`relative ${className}`}>

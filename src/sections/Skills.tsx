@@ -3,7 +3,7 @@ import React from 'react';
 const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 bg-gray-800 fade-in-section">
-      <div className="px-15">
+      <div className="px-6 md:px-15">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 gradient-text">My Skills</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
           <div className="p-6 rounded-lg transition-transform duration-300 hover:scale-105 gradient-border-cyan-pink" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>

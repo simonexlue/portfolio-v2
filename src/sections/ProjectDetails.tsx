@@ -28,7 +28,7 @@ const ProjectDetails: React.FC = () => {
   if (!project) {
     return (
       <section className="min-h-[calc(100vh-4rem)] py-20" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
-        <div className="px-15">
+        <div className="px-6 md:px-15">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 gradient-text">
               Project Not Found
@@ -49,7 +49,7 @@ const ProjectDetails: React.FC = () => {
 
   return (
     <section className="min-h-[calc(100vh-4rem)] py-10" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
-      <div className="px-15">
+      <div className="px-6 md:px-15">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-2">

@@ -4,7 +4,7 @@ const photo = '/images/my-photo.jpg';
 const About: React.FC = () => {
   return (
     <section id="about" className="py-20 fade-in-section" style={{ backgroundColor: 'rgb(14, 19, 30)' }}>
-                      <div className="w-full h-full px-12 lg:px-20 xl:px-24 flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 xl:gap-32">
+                      <div className="w-full h-full px-6 md:px-12 lg:px-20 xl:px-24 flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 xl:gap-32">
           <img
             src={photo}
             alt="My Photo"
