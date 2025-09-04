@@ -137,3 +137,129 @@ body::-webkit-scrollbar {
   opacity: 0;
   transform: translateY(-20px);
 }
+
+/* Gradient border classes for project detail sections */
+.gradient-border-cyan-pink {
+  position: relative;
+}
+
+.gradient-border-cyan-pink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(90deg, #22d3ee 0%, #ec4899 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border-cyan-pink:hover::before {
+  opacity: 1;
+}
+
+.gradient-border-red-yellow {
+  position: relative;
+}
+
+.gradient-border-red-yellow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(90deg, #f87171 0%, #facc15 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border-red-yellow:hover::before {
+  opacity: 1;
+}
+
+.gradient-border-cyan-blue {
+  position: relative;
+}
+
+.gradient-border-cyan-blue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(90deg, #22d3ee 0%, #3b82f6 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border-cyan-blue:hover::before {
+  opacity: 1;
+}
+
+.gradient-border-pink {
+  position: relative;
+}
+
+.gradient-border-pink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(90deg, #f472b6 0%, #db2777 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border-pink:hover::before {
+  opacity: 1;
+}
+
+.gradient-border-green-blue {
+  position: relative;
+}
+
+.gradient-border-green-blue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(90deg, #4ade80 0%, #60a5fa 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-border-green-blue:hover::before {
+  opacity: 1;
+}
