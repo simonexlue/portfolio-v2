@@ -1,31 +1,31 @@
 import ProjectCard from '../components/ProjectCard';
 
 // Waypoint
-import waypoint from '../assets/waypoint/waypoint.png';
-import waypoint1 from '../assets/waypoint/1.png';
-import waypoint2 from '../assets/waypoint/2.png';
-import waypoint3 from '../assets/waypoint/3.png';
-import waypoint4 from '../assets/waypoint/4.png';
-import waypoint5 from '../assets/waypoint/5.png';
-import waypoint6 from '../assets/waypoint/6.png';
-import waypoint7 from '../assets/waypoint/7.png';
+const waypoint = '/images/waypoint/waypoint.png';
+const waypoint1 = '/images/waypoint/1.png';
+const waypoint2 = '/images/waypoint/2.png';
+const waypoint3 = '/images/waypoint/3.png';
+const waypoint4 = '/images/waypoint/4.png';
+const waypoint5 = '/images/waypoint/5.png';
+const waypoint6 = '/images/waypoint/6.png';
+const waypoint7 = '/images/waypoint/7.png';
 
 // The Body Shop Clone
-import thebodyshop from '../assets/thebodyshop/thebodyshop.png';
-import thebodyshop1 from '../assets/thebodyshop/1.png';
-import thebodyshop2 from '../assets/thebodyshop/2.png';
-import thebodyshop3 from '../assets/thebodyshop/3.png';
-import thebodyshop4 from '../assets/thebodyshop/4.png';
-import thebodyshop5 from '../assets/thebodyshop/5.png';
-import thebodyshop6 from '../assets/thebodyshop/6.png';
+const thebodyshop = '/images/thebodyshop/thebodyshop.png';
+const thebodyshop1 = '/images/thebodyshop/1.PNG';
+const thebodyshop2 = '/images/thebodyshop/2.PNG';
+const thebodyshop3 = '/images/thebodyshop/3.PNG';
+const thebodyshop4 = '/images/thebodyshop/4.PNG';
+const thebodyshop5 = '/images/thebodyshop/5.PNG';
+const thebodyshop6 = '/images/thebodyshop/6.PNG';
 
 // Red Ball Drills Report Portal
-import redballdrills from '../assets/rbd/rbd.png';
-import redballdrills1 from '../assets/rbd/1.png';
-import redballdrills2 from '../assets/rbd/2.png';
-import redballdrills3 from '../assets/rbd/3.png';
-import redballdrills4 from '../assets/rbd/4.png';
-import redballdrills5 from '../assets/rbd/5.png';
+const redballdrills = '/images/rbd/rbd.png';
+const redballdrills1 = '/images/rbd/1.png';
+const redballdrills2 = '/images/rbd/2.png';
+const redballdrills3 = '/images/rbd/3.png';
+const redballdrills4 = '/images/rbd/4.png';
+const redballdrills5 = '/images/rbd/5.png';
 
 
 // Export project details for use in ProjectDetails component
