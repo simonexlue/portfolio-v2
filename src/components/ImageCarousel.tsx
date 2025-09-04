@@ -25,7 +25,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
   if (images.length === 0) return null;
   if (images.length === 1) {
     const singleImageWidth = imageSize === 'desktop' 
-      ? 'w-full max-w-none' 
+      ? 'w-[600px] sm:w-[700px] md:w-[800px] lg:w-full lg:max-w-none' 
       : 'w-full max-w-md';
     
     return (
@@ -48,7 +48,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
   
   // Set image size based on imageSize prop
   const imageWidth = imageSize === 'desktop' 
-    ? 'w-full max-w-none' 
+    ? 'w-[600px] sm:w-[700px] md:w-[800px] lg:w-[1100px]' 
     : 'w-72';
 
   return (
