@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface NavbarProps {
   onMenuToggle: (isOpen: boolean) => void;
@@ -7,6 +8,8 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     const newMenuState = !isMenuOpen;
@@ -25,6 +28,28 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
       setIsMenuOpen(false);
       onMenuToggle(false);
       document.body.style.overflow = 'auto';
+    }
+  };
+
+  const handleNavigation = (sectionId: string) => {
+    closeMenu();
+    
+    // If we're on the project details page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete, then scroll to section
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // We're already on the home page, just scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -51,17 +76,17 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
         <div className="w-full px-6 md:px-12">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <a href="#home" className="text-2xl font-bold gradient-text">Simone Lue</a>
+              <button onClick={() => handleNavigation('home')} className="text-2xl font-bold gradient-text">Simone Lue</button>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:block">
               <div className="flex items-baseline space-x-6">
-                <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Home</a>
-                <a href="#about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">About</a>
-                <a href="#skills" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Skills</a>
-                <a href="#projects" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Projects</a>
-                <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Contact</a>
+                <button onClick={() => handleNavigation('home')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Home</button>
+                <button onClick={() => handleNavigation('about')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">About</button>
+                <button onClick={() => handleNavigation('skills')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Skills</button>
+                <button onClick={() => handleNavigation('projects')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Projects</button>
+                <button onClick={() => handleNavigation('contact')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-200">Contact</button>
               </div>
             </div>
 
@@ -90,9 +115,9 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
           style={{ backgroundColor: 'rgb(14, 19, 30)' }}
         >
           <div className="flex flex-col h-full">
-            {/* Header with close button */}
-            <div className="flex justify-between items-center p-8">
-              <a href="#home" className="text-2xl font-bold gradient-text">Simone Lue</a>
+                          {/* Header with close button */}
+              <div className="flex justify-between items-center p-8">
+                <button onClick={() => handleNavigation('home')} className="text-2xl font-bold gradient-text">Simone Lue</button>
               <button
                 onClick={toggleMenu}
                 className="text-white hover:text-gray-300 focus:outline-none"
@@ -106,21 +131,21 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuToggle }) => {
             
             {/* Navigation Links */}
             <div className="flex-1 flex flex-col justify-start pt-8 px-6 md:px-12 space-y-12">
-              <a href="#home" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
+              <button onClick={() => handleNavigation('home')} className="text-white text-3xl font-semibold transition duration-200 text-left">
                 Home
-              </a>
-              <a href="#about" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
+              </button>
+              <button onClick={() => handleNavigation('about')} className="text-white text-3xl font-semibold transition duration-200 text-left">
                 About
-              </a>
-              <a href="#skills" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
+              </button>
+              <button onClick={() => handleNavigation('skills')} className="text-white text-3xl font-semibold transition duration-200 text-left">
                 Skills
-              </a>
-              <a href="#projects" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
+              </button>
+              <button onClick={() => handleNavigation('projects')} className="text-white text-3xl font-semibold transition duration-200 text-left">
                 Projects
-              </a>
-              <a href="#contact" onClick={toggleMenu} className="text-white text-3xl font-semibold transition duration-200">
+              </button>
+              <button onClick={() => handleNavigation('contact')} className="text-white text-3xl font-semibold transition duration-200 text-left">
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         </div>
