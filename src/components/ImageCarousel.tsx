@@ -35,7 +35,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
             <img 
               src={images[0]} 
               alt={title || 'Project image'} 
-              className={`w-full ${imageSize === 'desktop' ? 'h-[500px] md:h-auto md:max-h-[60vh]' : 'h-auto max-h-[60vh]'} object-contain rounded-lg`}
+              className={`w-full ${imageSize === 'desktop' ? 'h-[700px] md:h-auto md:max-h-[60vh]' : 'h-auto max-h-[60vh]'} object-contain rounded-lg`}
             />
           </div>
         </div>
