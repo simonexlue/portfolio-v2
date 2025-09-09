@@ -24,20 +24,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
 
   if (images.length === 0) return null;
   if (images.length === 1) {
-    const singleImageWidth = imageSize === 'desktop' 
-      ? 'w-[600px] sm:w-[700px] md:w-[800px] lg:w-full lg:max-w-none' 
-      : 'w-full max-w-md';
-    
     return (
       <div className={`relative ${className}`}>
-        <div className="bg-gray-900 rounded-lg shadow-2xl p-4 flex items-center justify-center">
-          <div className={`mx-auto ${singleImageWidth}`}>
-            <img 
-              src={images[0]} 
-              alt={title || 'Project image'} 
-              className={`w-full ${imageSize === 'desktop' ? 'h-[700px] md:h-auto md:max-h-[60vh]' : 'h-auto max-h-[60vh]'} object-contain rounded-lg`}
-            />
-          </div>
+        <div className={`bg-gray-900 rounded-lg shadow-2xl flex items-center justify-center ${imageSize === 'desktop' ? 'h-[350px] md:h-[600px]' : 'h-[600px]'}`}>
+          <img 
+            src={images[0]} 
+            alt={title || 'Project image'} 
+            className="w-full h-full object-contain rounded-lg"
+          />
         </div>
       </div>
     );
@@ -92,47 +86,55 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, className 
         })}
       </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={scrollPrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 z-20"
-        aria-label="Previous image"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-
-      <button
-        onClick={scrollNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 z-20"
-        aria-label="Next image"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      {/* Dot Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-        {wheelImages.map((_, index) => (
+      {/* Navigation Arrows - Only show if there are multiple images */}
+      {wheelImages.length > 1 && (
+        <>
           <button
-            key={`dot-${index}`}
-            onClick={() => scrollTo(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              index === currentIndex 
-                ? 'bg-white scale-125' 
-                : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-            }`}
-            aria-label={`Go to carousel image ${index + 1}`}
-          />
-        ))}
-      </div>
+            onClick={scrollPrev}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 z-20"
+            aria-label="Previous image"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
 
-      {/* Image Counter */}
-      <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm z-20">
-        {currentIndex + 1} / {wheelImages.length}
-      </div>
+          <button
+            onClick={scrollNext}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 z-20"
+            aria-label="Next image"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </>
+      )}
+
+      {/* Dot Indicators - Only show if there are multiple images */}
+      {wheelImages.length > 1 && (
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+          {wheelImages.map((_, index) => (
+            <button
+              key={`dot-${index}`}
+              onClick={() => scrollTo(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                index === currentIndex 
+                  ? 'bg-white scale-125' 
+                  : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+              }`}
+              aria-label={`Go to carousel image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Image Counter - Only show if there are multiple images */}
+      {wheelImages.length > 1 && (
+        <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm z-20">
+          {currentIndex + 1} / {wheelImages.length}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
+import upcoming from '../assets/upcoming.jpg';
 
 // Waypoint
 const waypoint = '/images/waypoint/waypoint.png';
@@ -161,7 +162,52 @@ export const projectDetails = [
     overview: [
       "Red Ball Drills Reporting Portal was a freelance engagement where I modernized and enhanced a client’s enterprise reporting system. The project involved a migration from Node.js 18 to Node.js 22, requiring careful dependency alignment and resolution of breaking changes. Beyond upgrading the stack, I delivered significant usability improvements, including responsive moderator tables, rich text editing with markdown persistence, and refined section labeling with contextual tooltips. A key highlight was designing and implementing a production-ready PDF export system using Playwright and Chromium, enabling editable, professional-grade reports directly from the platform. Throughout the project, I emphasized security, performance, and maintainability—ensuring the application not only met immediate client needs but was also positioned for long-term scalability."
     ]
+  },
+  {
+    id: 4,
+    title: 'Quantra',
+    description: 'Cross-platform mobile app being built with React Native (Expo Dev Client) to streamline restaurant inventory management using voice input,    Firebase authentication, and Firestore storage.',
+    private: true,
+    images: [
+      upcoming,
+      upcoming,
+    ],
+    repoLink: '#',
+    technologies: [
+      'React Native',
+      'Expo Dev Client',
+      'Firebase',
+      'FastAPI',
+      'TypeScript'
+    ],
+    features: [
+        'Role-based login for managers using Firebase Auth',
+        'Voice-to-text inventory input with on-device STT (Apple Speech / Android SpeechRecognizer)',
+        'Manual edit mode to adjust item counts after STT transcription',
+        'Global item catalog with predefined items and synonyms to ensure consistency',
+        'Inventory submissions stored in Firestore with item, qty, and critical flag',
+        'Realtime viewing of current inventory for the logged-in store',
+        'Offline-first support via Firestore SDK caching',
+        'Critical stock flags highlighted in the UI for quick action',
+        'Planned for scalability with FastAPI + Postgres backend for advanced reporting, analytics, and purchase order workflows'
+      ],
+      challenges: [
+        'Employees often avoid manual inventory updates due to time and friction',
+        'Ensuring consistency across multiple stores with a shared item catalog',
+        'Handling offline use cases where Wi-Fi in kitchens is unreliable',
+        'Designing a simple data structure that supports an MVP today while leaving space for scalable backend integration later'
+      ],
+      solutions: [
+        'Introduce voice-first inventory input to lower friction and increase adoption',
+        'Maintain a global item catalog with synonyms to prevent duplicate entries',
+        'Leverage Firestore’s offline caching so counts can be submitted without internet',
+        'Keep the MVP schema minimal (users, items, inventoryCounts) while planning to extend with FastAPI + Postgres for scalability'
+      ],
+      overview: [
+        "Quantra is an MVP mobile app currently in development to address the pain of manual inventory across multiple restaurant locations. Managers log in with Firebase Auth, use their phone’s mic to dictate inventory counts, edit them inline, and save directly to Firestore. The app enforces consistency with a predefined item catalog and automatically flags critical stock shortages. A key differentiator is offline-first support—staff can submit counts even with poor Wi-Fi, with automatic syncing once online. By using React Native with Expo Dev Client, the app runs natively on both iOS and Android, leveraging each platform’s built-in speech-to-text engine. While Firestore serves as the MVP data store, the architecture anticipates growth with FastAPI and Postgres planned for future reporting, analytics, and supplier integrations. This project highlights my ability to design pragmatic, scalable solutions—delivering immediate usability while positioning the app for enterprise-level expansion."
+      ]
   }
+  
 ];
 
 const Projects: React.FC = () => {
