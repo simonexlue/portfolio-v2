@@ -126,7 +126,7 @@ export const projectDetails = [
     overview: [
         "The Body Shop Clone is a Shopify storefront replica built with the Dawn theme to demonstrate theme development skills. The project focused on creating a bundle-builder feature powered by metaobjects and metafields, while replicating the core functionality of products, collections, and storefront layouts. Emphasis was placed on responsive design, Liquid customization, and accurately mirroring the real storefront experience."
     ],
-    imageType: 'desktop'
+    imageType: 'mobile'
   },
   {
     id: 3,
