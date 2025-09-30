@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
-//import upcoming from '../assets/upcoming.jpg';
+import upcoming from '../assets/upcoming.jpg';
 
 // Waypoint
 const waypoint = '/images/waypoint/waypoint.png';
@@ -175,7 +175,7 @@ export const projectDetails = [
     description: 'Cross-platform mobile app being built with React Native (Expo Dev Client) to streamline restaurant inventory management using voice input,    Firebase authentication, and Firestore storage.',
     private: false,
     images: [
-      quantra1,
+      upcoming,
       quantra1,
       quantra2,
       quantra3,
