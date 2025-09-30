@@ -49,7 +49,7 @@ export const projectDetails = [
       waypoint3,       
       waypoint4,   
       waypoint5,    
-      waypoint6,       
+      waypoint6,
       waypoint7,       
     ],
     repoLink: 'https://github.com/latte-labs/waypoint',
@@ -87,7 +87,8 @@ export const projectDetails = [
     ],
     overview: [
         "WayPoint is a mobile travel-planning app built with React Native, FastAPI, and PostgreSQL that delivers personalized recommendations based on a user’s travel style (relaxation, adventure, or culture). It features a travel style quiz, interactive map with Google Places integration, real-time collaborative itinerary planning, gamified achievements, and an AI-powered chatbot assistant. The backend uses FastAPI + Firebase for real-time updates, with integrations to Google Places, OpenWeatherMap, and OpenAI APIs."
-    ]
+    ],
+    imageType: 'mobile'
   },
   {
     id: 2,
@@ -124,7 +125,8 @@ export const projectDetails = [
     ],
     overview: [
         "The Body Shop Clone is a Shopify storefront replica built with the Dawn theme to demonstrate theme development skills. The project focused on creating a bundle-builder feature powered by metaobjects and metafields, while replicating the core functionality of products, collections, and storefront layouts. Emphasis was placed on responsive design, Liquid customization, and accurately mirroring the real storefront experience."
-    ]
+    ],
+    imageType: 'desktop'
   },
   {
     id: 3,
@@ -167,7 +169,8 @@ export const projectDetails = [
     ],
     overview: [
       "Red Ball Drills Reporting Portal was a freelance engagement where I modernized and enhanced a client’s enterprise reporting system. The project involved a migration from Node.js 18 to Node.js 22, requiring careful dependency alignment and resolution of breaking changes. Beyond upgrading the stack, I delivered significant usability improvements, including responsive moderator tables, rich text editing with markdown persistence, and refined section labeling with contextual tooltips. A key highlight was designing and implementing a production-ready PDF export system using Playwright and Chromium, enabling editable, professional-grade reports directly from the platform. Throughout the project, I emphasized security, performance, and maintainability—ensuring the application not only met immediate client needs but was also positioned for long-term scalability."
-    ]
+    ],
+    imageType: 'desktop'
   },
   {
     id: 4,
@@ -186,6 +189,7 @@ export const projectDetails = [
       'React Native',
       'Expo Dev Client',
       'Firebase',
+      'FastAPI',
       'TypeScript'
     ],
     features: [
@@ -213,9 +217,9 @@ export const projectDetails = [
       ],
       overview: [
         "Quantra is an MVP mobile app currently in development to address the pain of manual inventory across multiple restaurant locations. Managers log in with Firebase Auth, use their phone’s mic to dictate inventory counts, edit them inline, and save directly to Firestore. The app enforces consistency with a predefined item catalog and automatically flags critical stock shortages. A key differentiator is offline-first support—staff can submit counts even with poor Wi-Fi, with automatic syncing once online. By using React Native with Expo Dev Client, the app runs natively on both iOS and Android, leveraging each platform’s built-in speech-to-text engine. While Firestore serves as the MVP data store, the architecture anticipates growth with FastAPI and Postgres planned for future reporting, analytics, and supplier integrations. This project highlights my ability to design pragmatic, scalable solutions—delivering immediate usability while positioning the app for enterprise-level expansion."
-      ]
+      ],
+      imageType: 'mobile'
   }
-  
 ];
 
 const Projects: React.FC = () => {

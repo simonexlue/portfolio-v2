@@ -65,7 +65,7 @@ const ProjectDetails: React.FC = () => {
             <ImageCarousel 
               images={project.images} 
               title={project.title}
-              imageSize={project.id === 3 || project.id === 4 ? 'desktop' : 'mobile'}
+              imageSize={(project as any).imageType === 'desktop' ? 'desktop' : 'mobile'}
             />
           </div>
 
