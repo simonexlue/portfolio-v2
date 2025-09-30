@@ -28,6 +28,12 @@ const redballdrills3 = '/images/rbd/3.png';
 const redballdrills4 = '/images/rbd/4.png';
 const redballdrills5 = '/images/rbd/5.png';
 
+// Quantra
+//const quantra = '/images/quantra/quantra.png';
+const quantra1 = '/images/quantra/1.png';
+const quantra2 = '/images/quantra/2.png';
+const quantra3 = '/images/quantra/3.png';
+const quantra4 = '/images/quantra/4.png';
 
 // Export project details for use in ProjectDetails component
 export const projectDetails = [
@@ -167,17 +173,19 @@ export const projectDetails = [
     id: 4,
     title: 'Quantra',
     description: 'Cross-platform mobile app being built with React Native (Expo Dev Client) to streamline restaurant inventory management using voice input,    Firebase authentication, and Firestore storage.',
-    private: true,
+    private: false,
     images: [
-      upcoming,
-      upcoming,
+      quantra1,
+      quantra1,
+      quantra2,
+      quantra3,
+      quantra4,
     ],
     repoLink: '#',
     technologies: [
       'React Native',
       'Expo Dev Client',
       'Firebase',
-      'FastAPI',
       'TypeScript'
     ],
     features: [
