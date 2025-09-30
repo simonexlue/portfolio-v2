@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
-import upcoming from '../assets/upcoming.jpg';
+//import upcoming from '../assets/upcoming.jpg';
 
 // Waypoint
 const waypoint = '/images/waypoint/waypoint.png';
