@@ -181,7 +181,7 @@ export const projectDetails = [
       quantra3,
       quantra4,
     ],
-    repoLink: '#',
+    repoLink: 'https://github.com/simonexlue/quantra',
     technologies: [
       'React Native',
       'Expo Dev Client',
