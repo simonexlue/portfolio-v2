@@ -34,6 +34,13 @@ const quantra2 = '/images/quantra/2.png';
 const quantra3 = '/images/quantra/3.png';
 const quantra4 = '/images/quantra/4.png';
 
+// TradeLens
+const tradelens = '/images/tradelens/1.png';
+const tradelens1 = '/images/tradelens/2.png';
+const tradelens2 = '/images/tradelens/3.png';
+const tradelens3 = '/images/tradelens/4.png';
+const tradelens4 = '/images/tradelens/1.png';
+
 // Export project details for use in ProjectDetails component
 export const projectDetails = [
   {
@@ -218,6 +225,55 @@ export const projectDetails = [
         "Quantra is an MVP mobile app currently in development to address the pain of manual inventory across multiple restaurant locations. Managers log in with Firebase Auth, use their phone’s mic to dictate inventory counts, edit them inline, and save directly to Firestore. The app enforces consistency with a predefined item catalog and automatically flags critical stock shortages. A key differentiator is offline-first support—staff can submit counts even with poor Wi-Fi, with automatic syncing once online. By using React Native with Expo Dev Client, the app runs natively on both iOS and Android, leveraging each platform’s built-in speech-to-text engine. While Firestore serves as the MVP data store, the architecture anticipates growth with FastAPI and Postgres planned for future reporting, analytics, and supplier integrations. This project highlights my ability to design pragmatic, scalable solutions—delivering immediate usability while positioning the app for enterprise-level expansion."
       ],
       imageType: 'mobile'
+  },
+  {
+    id: 5,
+    title: 'TradeLens - In Progress',
+    description: 'Full-stack AI-powered trading journal built with Next.js, FastAPI, Supabase, and AWS S3. The platform analyzes chart screenshots using vision models to generate structured insights, helping traders review performance without manually journaling.',
+    private: false,
+    images: [
+      tradelens,
+      tradelens1,
+      tradelens2,
+      tradelens3,
+      tradelens4,
+    ],
+    repoLink: 'https://github.com/simonexlue/tradelens-frontend',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'FastAPI',
+      'Supabase',
+      'AWS S3',
+      'OpenAI Vision'
+    ],
+    features: [
+      'Secure authentication using Supabase Auth',
+      'Direct-to-S3 image upload using FastAPI presigned URLs with strict per-user permissions',
+      'Automatic AI analysis pipeline (vision + LLM) that produces “What Happened,” “Why It Worked/Failed,” and improvement tips',
+      'Per-trade detail view with full screenshot, notes, analysis, and metadata',
+      'Tag suggestion engine (FVG, Liquidity Grab, VWAP, market sessions, outcomes) with confidence scores',
+      'Filtering and sorting by session, strategy, outcome, or AI-suggested tags',
+      'Analytics dashboard with win rate, average R-multiple, session performance, and recurring mistakes',
+      ],
+      challenges: [
+        'Traders spend significant time manually journaling trades, making it difficult to review performance consistently',
+        'Screenshots are large files that require secure, scalable storage with controlled access',
+        'AI output must be reliable and structured, not generic or vague',
+        'Trading patterns (sessions, strategies, outcomes) must be automatically categorized without user effort',
+        'Performance and UX must remain fast when rendering dozens or hundreds of high-resolution images'
+      ],
+      solutions: [
+        'Implemented a vision-driven analysis pipeline to automate journaling and generate clear, structured insights',
+        'Used presigned AWS S3 URLs with private buckets to ensure secure, scalable screenshot storage',
+        'Designed a normalized database schema in Supabase to store trades, images, analyses, and tags cleanly',
+        'Built a tag inference layer that suggests strategies and sessions to reduce user labeling effort',
+        'Added thumbnail generation, pagination, and optimized fetching to keep the UI fast and responsive'
+      ],
+      overview: [
+        "TradeLens is a full-stack AI trading journal designed to remove the friction of manual journaling for futures and day traders. Users upload chart screenshots directly to AWS S3 through a secure presigned workflow, and the platform analyzes trades using an AI vision + LLM pipeline that breaks down what happened, why it succeeded or failed, and how to improve. Each trade is stored with metadata, screenshots, and structured analysis, and traders can browse their performance through a clean Next.js interface with thumbnail previews and infinite scrolling. As the user’s dataset grows, TradeLens automatically suggests tags like FVG, Liquidity Grab, or market sessions, helping traders understand recurring patterns in their decision-making. The upcoming analytics dashboard provides metrics such as win rate, average R-multiple, and top recurring mistakes, turning raw screenshots into actionable insights. Built with Next.js, FastAPI, Supabase, and AWS S3, the architecture is designed for speed, scalability, and future expansion into advanced analytics or SaaS monetization."
+      ],
+      imageType: 'desktop'
   }
 ];
 
