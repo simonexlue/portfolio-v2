@@ -40,6 +40,7 @@ const tradelens1 = '/images/tradelens/2.png';
 const tradelens2 = '/images/tradelens/3.png';
 const tradelens3 = '/images/tradelens/4.png';
 const tradelens4 = '/images/tradelens/1.png';
+const tradelens5 = '/images/tradelens/5.png';
 
 // Export project details for use in ProjectDetails component
 export const projectDetails = [
@@ -237,6 +238,7 @@ export const projectDetails = [
       tradelens2,
       tradelens3,
       tradelens4,
+      tradelens5,
     ],
     repoLink: 'https://github.com/simonexlue/tradelens-frontend',
     technologies: [
